@@ -1,19 +1,12 @@
-" Colors & Themes
-" au ColorScheme farout  hi Comment           ctermfg=242 guifg=#6b7089
-" au ColorScheme nord    hi SignatureMarkText ctermfg =1 ctermbg=234
-" au ColorScheme iceberg hi SignatureMarkText ctermfg =1 ctermbg=234
+"
+" SANE DEFAULTS
+"
 
-" Default settings for using CoC
-source ~/.config/nvim/coc.vim
-
-""" SANE DEFAULTS
-set encoding=utf-8
 syntax on
+set encoding=utf-8
 set nowrap
 set noemoji
 set history=9000
-set number relativenumber
-set splitbelow splitright
 set nojoinspaces
 set backspace=indent,eol,start
 set textwidth=0
@@ -24,39 +17,38 @@ filetype plugin on
 set linebreak
 set foldlevel=2
 
+" Do not highlight search results,
+" because it is annoying for navigation.
+set nohlsearch
+set incsearch
+set ignorecase
+set nowrapscan
 
-""" REMAPS
 
-"" MOVEMENT
+"
+" REMAPS
+"
+
 " Move intuitively through wrapped lines
 nnoremap j gj
 nnoremap k gk
-
-" Moves for editing from the beginning and until the end of the line
-noremap L g_
-noremap H ^
-
-" Escaping from the terminal mode.
-" Not the best solution for using Ranger.
-tnoremap <Esc> <C-\><C-n>
 
 " Be always at the center when navigating
 nnoremap zo za
 nnoremap n nzz
 nnoremap G Gzz
 
-" Navigating open buffers
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nnoremap <C-p> <C-w>p
+" Escaping from the terminal mode.
+" Not the best solution for using Ranger.
+tnoremap <Esc> <C-\><C-n>
 
 " Opening buffers
 nnoremap <space><space> :vert sb<CR>
 
 
-"" SEARCH
+"
+" SEARCH
+"
 
 " Fuzzy-navigation
 nnoremap sg :GFiles<CR>
@@ -79,25 +71,10 @@ let mapleader = "m"
 nnoremap U <C-r>
 nnoremap Q :q<CR>
 
-" Copying and pasting
-noremap <space> "+
-
-""" SETTING
-
-" Do not highlight search results,
-" because it is annoying for navigation.
-set nohlsearch
-set incsearch
-set ignorecase
-set nowrapscan
-
-
 " Refresh syntax highlighting on each keystroke.
 " Haskell andd CPP syntax breaks otherwise.
 " set noshowmode
 " au Syntax * syntax sync fromstart
-
-
 
 " 1 tab == 2 spaces
 " Do not use tabs, indent nicely.
@@ -110,12 +87,9 @@ set softtabstop=0
 set tabstop=2
 
 
-
-
-
-
-
-""" PLUGINS
+"
+" PLUGINS
+"
 
 " EasyAlign
 nmap ga <Plug>(EasyAlign)

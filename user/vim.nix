@@ -2,7 +2,7 @@
 
 with pkgs;
 let
-  sources = import ./niv-vim-plugins/sources.nix;
+  sources = import ./vim-plugins/nix/sources.nix;
 
   eagerPlugins = with vimPlugins; [
     # Enhancing vim language
@@ -25,7 +25,6 @@ let
     # Language pack
     vim-polyglot
 
-
     # Language server
     coc-nvim
     coc-prettier
@@ -39,6 +38,10 @@ let
     vim-colorschemes
   ];
 
+  #
+  #
+  #
+
   mkPlugin = name: vimUtils.buildVimPlugin {
     pname = name;
     version = "0.0.0";
@@ -47,7 +50,6 @@ let
       sha256 = sources.${name}.sha256;
     };
   };
-
 
   nivEagerPlugins = map mkPlugin [
     "venn.nvim"        # :VBox for drawing
@@ -80,7 +82,6 @@ let
   nivLazyPlugins = map mkPlugin [
     # Themes
     "gruvbox"
-    "happy_hacking.vim"
     "happy_rusting.vim"
     "vim-farout"
   ];
@@ -101,7 +102,7 @@ let
     viAlias = true;
     vimAlias = true;
     configure = {
-      customRC = "source ~/.config/nvim/init.vim";
+      customRC = "source ~/.config/nvim/init.lua";
       packages.myVimPackage = {
         start = eagerPlugins ++ nivEagerPlugins ++ lazyPlugins ++ nivLazyPlugins;
         opt = [];
@@ -114,7 +115,6 @@ in
   home.packages = [
     nvim
     nodejs # coc-nvim
-
 
     ccls    # c++ language server
     cpplint # c linter which is annoying

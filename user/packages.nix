@@ -75,7 +75,6 @@
       keepassxc
       anki-bin      # There is also anki package, but it is outdated
 
-      mpd           # music server
       ncmpcpp       # music player
       xournalpp     # drawing tool
     ];

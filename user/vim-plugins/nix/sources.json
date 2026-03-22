@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "dense-analysis",
         "repo": "ale",
-        "rev": "992476982ab97bfa7298f5da1ec0d38026f5960a",
-        "sha256": "0rcxsa87dk004mfdx6m5gm3i5p8rdm4fv5wz2qwjy3yimza41kz6",
+        "rev": "69c945d5daecadf8e4c4c499d0a7babda748d603",
+        "sha256": "19davlfzkajyk7wdkgkxvkq35f3677x67xd04lfm6m5isyj9n9hm",
         "type": "tarball",
-        "url": "https://github.com/dense-analysis/ale/archive/992476982ab97bfa7298f5da1ec0d38026f5960a.tar.gz",
+        "url": "https://github.com/dense-analysis/ale/archive/69c945d5daecadf8e4c4c499d0a7babda748d603.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "bclose.vim": {
@@ -29,10 +29,10 @@
         "homepage": null,
         "owner": "glacambre",
         "repo": "firenvim",
-        "rev": "56a49d79904921a8b4405786e12b4e12fbbf171b",
-        "sha256": "0wpmnyfdawqi46biw6aizk9g75fpkmd84y921fq7gqppk8w6nm38",
+        "rev": "a18ef908ac06b52ad9333b70e3e630b0a56ecb3d",
+        "sha256": "098zjcybswsawjqgs1ynpr4ys77hfi6viw3lm1rdig3a6bmz3v6y",
         "type": "tarball",
-        "url": "https://github.com/glacambre/firenvim/archive/56a49d79904921a8b4405786e12b4e12fbbf171b.tar.gz",
+        "url": "https://github.com/glacambre/firenvim/archive/a18ef908ac06b52ad9333b70e3e630b0a56ecb3d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gruvbox": {
@@ -41,22 +41,10 @@
         "homepage": "",
         "owner": "morhetz",
         "repo": "gruvbox",
-        "rev": "bf2885a95efdad7bd5e4794dd0213917770d79b7",
-        "sha256": "0576sqzljal3k8rsnbmcvlsk4ywg1vfgkxkvrv2zac2d5wwa9i8z",
+        "rev": "697c00291db857ca0af00ec154e5bd514a79191f",
+        "sha256": "0gj1bikyz13jgd5rqmkdgxmva2mnmd672hhn4jd1dr7nw1dghrby",
         "type": "tarball",
-        "url": "https://github.com/morhetz/gruvbox/archive/bf2885a95efdad7bd5e4794dd0213917770d79b7.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "happy_hacking.vim": {
-        "branch": "master",
-        "description": "Moved to https://gitlab.com/yorickpeterse/happy_hacking.vim",
-        "homepage": "",
-        "owner": "YorickPeterse",
-        "repo": "happy_hacking.vim",
-        "rev": "e2e73d9cac5ff7acfc37bd090f1d709eac94c9a9",
-        "sha256": "0sml70vxmpgjks3s3z0fr08mmkdjypbp284k3z0kxl2gqna00wrd",
-        "type": "tarball",
-        "url": "https://github.com/YorickPeterse/happy_hacking.vim/archive/e2e73d9cac5ff7acfc37bd090f1d709eac94c9a9.tar.gz",
+        "url": "https://github.com/morhetz/gruvbox/archive/697c00291db857ca0af00ec154e5bd514a79191f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "happy_rusting.vim": {
@@ -77,10 +65,10 @@
         "homepage": "",
         "owner": "Yggdroot",
         "repo": "indentLine",
-        "rev": "7753505f3c500ec88d11e9373d05250f49c1d900",
-        "sha256": "1lh6d3ljz1rmj3xa4f0n687fyxxc30dnmsq8mgd77v27f7lj62p5",
+        "rev": "b96a75985736da969ac38b72a7716a8c57bdde98",
+        "sha256": "0g5rvgn6919wbg4xpiwzkq6c1nhsg2lmxmqg3fj75fk71glcggcp",
         "type": "tarball",
-        "url": "https://github.com/Yggdroot/indentLine/archive/7753505f3c500ec88d11e9373d05250f49c1d900.tar.gz",
+        "url": "https://github.com/Yggdroot/indentLine/archive/b96a75985736da969ac38b72a7716a8c57bdde98.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "kmonad": {
@@ -89,22 +77,10 @@
         "homepage": null,
         "owner": "david-janssen",
         "repo": "kmonad",
-        "rev": "95bb58b7347ebacb4654fb21c798e1cd10331b0d",
-        "sha256": "0rprjk2n9ssvfk3hlibgd44zvn2hhxz1wqcrnjbbddvi3br5sv7s",
+        "rev": "1b2ec006259ddbe6cda30db8eb783e8177a9f12b",
+        "sha256": "1m4ws6w2ycq0y9fxzlb4c2r7dafm16xyf5w1wvm7n31rr39y5xs4",
         "type": "tarball",
-        "url": "https://github.com/david-janssen/kmonad/archive/95bb58b7347ebacb4654fb21c798e1cd10331b0d.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "neuron.vim": {
-        "branch": "master",
-        "description": "📝 Manage your Zettelkasten in {n}vim.",
-        "homepage": "",
-        "owner": "ihsanturk",
-        "repo": "neuron.vim",
-        "rev": "d1744be6e73f891f08065f31af06b3c441149261",
-        "sha256": "0wsrl2zf9zck8yf4xgds9bv243qimk99bnkh3p3rfpkc2g7ss7fm",
-        "type": "tarball",
-        "url": "https://github.com/ihsanturk/neuron.vim/archive/d1744be6e73f891f08065f31af06b3c441149261.tar.gz",
+        "url": "https://github.com/david-janssen/kmonad/archive/1b2ec006259ddbe6cda30db8eb783e8177a9f12b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -113,10 +89,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "82e5cd1ad3c387863f0545d7591512e76ab0fc41",
-        "sha256": "090l219mzc0gi33i3psgph6s2pwsc8qy4lyrqjdj4qzkvmaj65a7",
+        "rev": "dd678782cae74508d6b4824580d2b0935308011e",
+        "sha256": "0dk8dhh9vla2s409anmrfkva6h3r32xmz3cm8ha09wyk8iyf1f87",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/82e5cd1ad3c387863f0545d7591512e76ab0fc41.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/dd678782cae74508d6b4824580d2b0935308011e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -137,10 +113,10 @@
         "homepage": "",
         "owner": "sakhnik",
         "repo": "nvim-gdb",
-        "rev": "4408d2c10618636101945e9cd9ef9d68fc335e19",
-        "sha256": "1i57n41z8qpn5a626spkvn08jnbnhygia7hw2d0bvlcy56xx5wv4",
+        "rev": "b644f07c54608cc913c1d9e14954f15dcb7331a9",
+        "sha256": "00spj5az5av6rhyy7rynr6yc9idk8r8ck14vqfdj1q7wxgbc4pp2",
         "type": "tarball",
-        "url": "https://github.com/sakhnik/nvim-gdb/archive/4408d2c10618636101945e9cd9ef9d68fc335e19.tar.gz",
+        "url": "https://github.com/sakhnik/nvim-gdb/archive/b644f07c54608cc913c1d9e14954f15dcb7331a9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "quick-scope": {
@@ -149,10 +125,10 @@
         "homepage": "",
         "owner": "unblevable",
         "repo": "quick-scope",
-        "rev": "428e8698347f254d24b248af9f656194a80081e5",
-        "sha256": "0vindr83v4q26a7jxfwk87vpl1kymsh6cclhvpkmb6cpq0iv3yii",
+        "rev": "6cee1d9e0b9ac0fbffeb538d4a5ba9f5628fabbc",
+        "sha256": "1c38iywnc7rvbknz4r0j0xb81d40vm7d1sfw1awh4r5cmy4vxr3w",
         "type": "tarball",
-        "url": "https://github.com/unblevable/quick-scope/archive/428e8698347f254d24b248af9f656194a80081e5.tar.gz",
+        "url": "https://github.com/unblevable/quick-scope/archive/6cee1d9e0b9ac0fbffeb538d4a5ba9f5628fabbc.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "ranger.vim": {
@@ -173,10 +149,10 @@
         "homepage": null,
         "owner": "rust-lang",
         "repo": "rust.vim",
-        "rev": "4aa69b84c8a58fcec6b6dad6fe244b916b1cf830",
-        "sha256": "07nh8gvkwq91i7qcz0rk5jlc8sb4d3af4zq2892kmmw576zg1wd8",
+        "rev": "889b9a7515db477f4cb6808bef1769e53493c578",
+        "sha256": "1xklq4g6dvqd3a5msnrir899hzqmjkscpb8bq9wd4fi3ivmjjjgg",
         "type": "tarball",
-        "url": "https://github.com/rust-lang/rust.vim/archive/4aa69b84c8a58fcec6b6dad6fe244b916b1cf830.tar.gz",
+        "url": "https://github.com/rust-lang/rust.vim/archive/889b9a7515db477f4cb6808bef1769e53493c578.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sideways.vim": {
@@ -185,10 +161,10 @@
         "homepage": "http://www.vim.org/scripts/script.php?script_id=4171",
         "owner": "AndrewRadev",
         "repo": "sideways.vim",
-        "rev": "ab20cc8a6a7cb95679f99bc4ec724544f9b94c62",
-        "sha256": "0gfg0dxcifvwcx8330rm92vv1xyzs4jg5vc8p7vif63cblqyz5mz",
+        "rev": "1efb7db049e5536742dc89205f6e229297c31230",
+        "sha256": "1d1s1y4lwz36hhikz9yn0cg0qh2d7i06kjhr31zvc1cgmkd3wva3",
         "type": "tarball",
-        "url": "https://github.com/AndrewRadev/sideways.vim/archive/ab20cc8a6a7cb95679f99bc4ec724544f9b94c62.tar.gz",
+        "url": "https://github.com/AndrewRadev/sideways.vim/archive/1efb7db049e5536742dc89205f6e229297c31230.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "splitjoin.vim": {
@@ -197,10 +173,10 @@
         "homepage": "http://www.vim.org/scripts/script.php?script_id=3613",
         "owner": "AndrewRadev",
         "repo": "splitjoin.vim",
-        "rev": "ab9d5cd1fba6d3f1acaf25a1b31d4f6ff961c839",
-        "sha256": "03j3q2k1v2p6846a75w860jj57z16hnyq90y0jpi875wrq8i3140",
+        "rev": "9ce4fb4f0538cff02a57a393057b7ab371324483",
+        "sha256": "09z85yav830rl9zgcy3aw04c1ys0599h3wlfll0qlc6kvbn3haaa",
         "type": "tarball",
-        "url": "https://github.com/AndrewRadev/splitjoin.vim/archive/ab9d5cd1fba6d3f1acaf25a1b31d4f6ff961c839.tar.gz",
+        "url": "https://github.com/AndrewRadev/splitjoin.vim/archive/9ce4fb4f0538cff02a57a393057b7ab371324483.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "startuptime.vim": {
@@ -221,10 +197,10 @@
         "homepage": "http://www.vim.org/scripts/script.php?script_id=4172",
         "owner": "AndrewRadev",
         "repo": "switch.vim",
-        "rev": "900c5d3ee79b1771c5e07bf7290068ea35881756",
-        "sha256": "03fabz2xj69mwb52m3a1y9hlc0v62d0c2ysk7jjznx4mkq303cfm",
+        "rev": "297346b630943ebd4ea58598dfd30bae5debc739",
+        "sha256": "08afg3albyadsq7q5m8a8f36p2m95x75x0p8dqypxvcv5av78xkn",
         "type": "tarball",
-        "url": "https://github.com/AndrewRadev/switch.vim/archive/900c5d3ee79b1771c5e07bf7290068ea35881756.tar.gz",
+        "url": "https://github.com/AndrewRadev/switch.vim/archive/297346b630943ebd4ea58598dfd30bae5debc739.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "syntastic": {
@@ -245,10 +221,10 @@
         "homepage": "",
         "owner": "jbyuki",
         "repo": "venn.nvim",
-        "rev": "288329d9b5b8c2ffcb58cfe38fa3dd4ddf2139a0",
-        "sha256": "1b7nlg0xrm0bxwl3zda9m08pj3zmnmryjnpc9zx6b1g8qa4a4vjw",
+        "rev": "b09c2f36ddf70b498281845109bedcf08a7e0de0",
+        "sha256": "0mhkmccr3l9ggqlr0gzc5fcdmx7ap66gqbihdnkc4mbn9jipcp0h",
         "type": "tarball",
-        "url": "https://github.com/jbyuki/venn.nvim/archive/288329d9b5b8c2ffcb58cfe38fa3dd4ddf2139a0.tar.gz",
+        "url": "https://github.com/jbyuki/venn.nvim/archive/b09c2f36ddf70b498281845109bedcf08a7e0de0.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-bookmarks": {
@@ -281,10 +257,10 @@
         "homepage": "",
         "owner": "romainl",
         "repo": "vim-cool",
-        "rev": "0ad6a212a910cef0aac7af244ee008ddd39a75c2",
-        "sha256": "1jv3nl6vdn562zhd387yggwflncmy7vf89md5kkacmkvjz8rkis5",
+        "rev": "9ea940c0d537e55de0de4c0298c04b976960fb12",
+        "sha256": "0nz3q8knsmvz2nzyr6cfcfpaa76hf659876xvddsxszma6851acq",
         "type": "tarball",
-        "url": "https://github.com/romainl/vim-cool/archive/0ad6a212a910cef0aac7af244ee008ddd39a75c2.tar.gz",
+        "url": "https://github.com/romainl/vim-cool/archive/9ea940c0d537e55de0de4c0298c04b976960fb12.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-farout": {
@@ -329,10 +305,10 @@
         "homepage": "http://www.vim.org/scripts/script.php?script_id=3037",
         "owner": "michaeljsmith",
         "repo": "vim-indent-object",
-        "rev": "5c5b24c959478929b54a9e831a8e2e651a465965",
-        "sha256": "1kmwnz0jxjkvfzy06r7r73pcxfcyjp8p8m2d6qrhjfvzidgfhw19",
+        "rev": "8ab36d5ec2a3a60468437a95e142ce994df598c6",
+        "sha256": "04bbr9aiq2pnp7nh1rrcys0cm3a8divkrmvs2557zd1ck3rrx2kw",
         "type": "tarball",
-        "url": "https://github.com/michaeljsmith/vim-indent-object/archive/5c5b24c959478929b54a9e831a8e2e651a465965.tar.gz",
+        "url": "https://github.com/michaeljsmith/vim-indent-object/archive/8ab36d5ec2a3a60468437a95e142ce994df598c6.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-ingo-library": {
@@ -341,10 +317,10 @@
         "homepage": null,
         "owner": "inkarkat",
         "repo": "vim-ingo-library",
-        "rev": "733339b699824f0a3c90910c26d8fd949f13783c",
-        "sha256": "0pm042crvc72hjj9xkywaja08afh0vsfx1cxqim316xwp4fr0cn4",
+        "rev": "700aec39d26beaf1173ce3a52df62486d60d7fdb",
+        "sha256": "1n5nsya9w9qxb3p05ql30h6wpqaj3jkd3xq01rp7z48vl5x0dd5i",
         "type": "tarball",
-        "url": "https://github.com/inkarkat/vim-ingo-library/archive/733339b699824f0a3c90910c26d8fd949f13783c.tar.gz",
+        "url": "https://github.com/inkarkat/vim-ingo-library/archive/700aec39d26beaf1173ce3a52df62486d60d7fdb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-lsp-cxx-highlight": {
@@ -353,10 +329,10 @@
         "homepage": "",
         "owner": "jackguo380",
         "repo": "vim-lsp-cxx-highlight",
-        "rev": "0e7476ff41cd65e55f92fdbc7326335ec33b59b0",
-        "sha256": "02gyxhx39zqphqybsj8sgg70ilgcp0jaj9lcmyyivljg0qirnxhf",
+        "rev": "e0c749e955446b4e9e4cc33833fa45e30d8a15fe",
+        "sha256": "153p37lhyvhr0702iz50s0rh41xp78vr8ksc61cwvipb0sf3xnrk",
         "type": "tarball",
-        "url": "https://github.com/jackguo380/vim-lsp-cxx-highlight/archive/0e7476ff41cd65e55f92fdbc7326335ec33b59b0.tar.gz",
+        "url": "https://github.com/jackguo380/vim-lsp-cxx-highlight/archive/e0c749e955446b4e9e4cc33833fa45e30d8a15fe.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-move": {
@@ -365,10 +341,10 @@
         "homepage": "http://www.vim.org/scripts/script.php?script_id=4687",
         "owner": "matze",
         "repo": "vim-move",
-        "rev": "a4bbedda7ef516b4a1b74d145cd642297e82e800",
-        "sha256": "11mr7n0mch48mx14h3vq9v45qfwy7fn6kcvcl7p5vmmibmgg2qdp",
+        "rev": "267fd1cff61fc643dfb5f9b188c434906f5214aa",
+        "sha256": "1dj452f8bx0ji59n3wkpwbrwydxamlgzg5plvss9cd4qnf48blg0",
         "type": "tarball",
-        "url": "https://github.com/matze/vim-move/archive/a4bbedda7ef516b4a1b74d145cd642297e82e800.tar.gz",
+        "url": "https://github.com/matze/vim-move/archive/267fd1cff61fc643dfb5f9b188c434906f5214aa.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-ripgrep": {
@@ -449,10 +425,10 @@
         "homepage": "http://puremourning.github.io/vimspector-web",
         "owner": "puremourning",
         "repo": "vimspector",
-        "rev": "5200d077bde1abc12f0b7f6ad6a133ec3b924670",
-        "sha256": "0h4pn38k40mkz3h2ibnphnsm7w2pdsplqyw865l801ygz7vlpwbg",
+        "rev": "409005fac4f014b271ed3526f3c0d08c4d42ed19",
+        "sha256": "1pxv26rfsnq0f4dcnfhrp99j22qhlqxwff5mh5dbqrxgfdh7fb1b",
         "type": "tarball",
-        "url": "https://github.com/puremourning/vimspector/archive/5200d077bde1abc12f0b7f6ad6a133ec3b924670.tar.gz",
+        "url": "https://github.com/puremourning/vimspector/archive/409005fac4f014b271ed3526f3c0d08c4d42ed19.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
