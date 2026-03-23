@@ -15,13 +15,25 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    claude-code = {
+      url = "github:sadjow/claude-code-nix";
+    };
+
     secrets = {
       url = "path:/home/sheep/nixos/secrets.nix";
       flake = false;
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, secrets, ... }:
+  outputs = inputs@{
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    home-manager,
+    claude-code,
+    secrets,
+    ...
+  }:
   let
     system = "x86_64-linux";
     pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
@@ -37,7 +49,10 @@
         ./system/configuration.nix
 
         home-manager.nixosModules.home-manager {
-          home-manager.extraSpecialArgs = { inherit pkgs-unstable; };
+          home-manager.extraSpecialArgs = {
+            inherit pkgs-unstable;
+            inherit claude-code;
+          };
 
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, claude-code, ... }:
 {
   imports = [
     ./vim.nix
@@ -20,6 +20,8 @@
 
   home.packages = with pkgs; let
     utils = [
+      claude-code.packages.${pkgs.system}.default
+
       comma         # Run command without installing it
       kalker        # command line calculator
       tokei         # count lines of code
