@@ -1,0 +1,32 @@
+{
+    "layer": "top",
+
+    "modules-left": ["battery", "network"],
+    "modules-center": ["niri/window"],
+    "modules-right": ["niri/language", "pulseaudio", "clock"],
+
+    "niri/window": {
+        "max-length": 50
+    },
+    "niri/language": {
+        "format": "{short}",
+    },
+
+    "battery": {
+        "format": "{capacity}%",
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "format-ethernet": "eth  >{bandwidthUpBits}  &lt;{bandwidthDownBits}",
+        "format-wifi": "{essid}  >{bandwidthUpBits}  &lt;{bandwidthDownBits}",
+        "format-disconnected": "disconnected",
+        "interval": 2
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}",
+    },
+    "pulseaudio": {
+        "format": "{volume}%",
+        "format-muted": "{volume}%",
+    },
+}
