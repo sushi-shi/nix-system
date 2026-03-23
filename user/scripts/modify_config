@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_DIR="$HOME/.config"
+
+while IFS= read -r -d '' link; do
+    target="$(readlink "$link")"
+
+    if [[ "$target" == /nix/store/* ]]; then
+        rel_to_config="${link#$CONFIG_DIR/}"
+        new_target="$(realpath -m "${SCRIPT_DIR}/../config/${rel_to_config}")"
+
+        if [[ -e "$new_target" ]]; then
+          ln -sf "$new_target" "$link"
+          echo "$rel_to_config" "$new_target"
+        fi
+    fi
+done < <(find "$CONFIG_DIR" -type l -print0)
