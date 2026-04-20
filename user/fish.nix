@@ -63,6 +63,7 @@
 
     "yd"   = ''yt-dlp --cookies-from-browser=firefox'';
     "yda"  = ''yt-dlp --cookies-from-browser=firefox --extract-audio --audio-format=mp3 --audio-quality 0'';
+    "yds"  = ''yt-dlp --cookies-from-browser=firefox --skip-download --write-auto-subs'';
 
     # query system-wide packages
     "nq"   = ''

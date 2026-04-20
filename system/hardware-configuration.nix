@@ -22,7 +22,14 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-label/NIXOS_ROOT";
+    { device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=4G" "mode=755" ];
+    };
+
+
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-label/NIXOS_NIX";
       fsType = "ext4";
     };
 
