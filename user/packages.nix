@@ -22,6 +22,8 @@
     utils = [
       claude-code.packages.${pkgs.system}.default
 
+      qrencode      # QR-code generator
+
       comma         # Run command without installing it
       kalker        # command line calculator
       tokei         # count lines of code

@@ -10,7 +10,14 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
   boot.initrd.kernelModules = [ "dm-snapshot" "cryptd" ];
-  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-label/NIXOS_LUKS";
+
+  boot.initrd.luks.devices."cryptroot" = {
+    device = "/dev/disk/by-label/NIXOS_LUKS";
+    keyFile = "/dev/disk/by-id/usb-Samsung_Flash_Drive_FIT_0375425050002120-0:0-part2";
+    keyFileSize = 4096;
+    fallbackToPassword = true;
+  };
+
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
@@ -31,9 +38,9 @@
     };
 
   fileSystems."/mnt/keepass_key" = {
-    device = "/dev/disk/by-uuid/64A5-F009";
+    device = "/dev/disk/by-uuid/EDEE-5712";
     fsType = "exfat";
-    options = [ "nofail" "noauto" "noexec" "umask=077" "uid=1001" "gid=100" "x-systemd.automount" ];
+    options = [ "nofail" "noauto" "noexec" "umask=077" "uid=${toString config.users.users.sheep.uid}" "gid=${toString config.users.users.sheep.group}" "x-systemd.automount" ];
   };
 
   swapDevices =
