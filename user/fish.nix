@@ -61,19 +61,8 @@
     # list sizes
     "lss"  = "du -sh * | sort -rh | column -t";
 
-    "yd"   = ''yt-dlp'';
-    "yda"  = ''yt-dlp --extract-audio --audio-format "best" --audio-quality 0'';
-
-    "g" = ''git'';
-    "gd" = ''git diff'';
-    "ga" = ''git add'';
-    "gc" = ''git commit'';
-    "gt" = ''git checkout'';
-
-    "c" = ''cargo'';
-    "cr" = ''cargo run'';
-    "cb" = ''cargo build'';
-    "ct" = ''cargot test'';
+    "yd"   = ''yt-dlp --cookies-from-browser=firefox'';
+    "yda"  = ''yt-dlp --cookies-from-browser=firefox --extract-audio --audio-format=mp3 --audio-quality 0'';
 
     # query system-wide packages
     "nq"   = ''

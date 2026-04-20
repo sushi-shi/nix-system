@@ -74,7 +74,6 @@
       telegram-desktop
       signal-desktop # Secure telegram
 
-      keepassxc
       anki-bin      # There is also anki package, but it is outdated
 
       ncmpcpp       # music player

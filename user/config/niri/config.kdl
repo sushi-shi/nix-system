@@ -67,11 +67,11 @@ cursor {
 
 spawn-at-startup "launch_waybar"
 spawn-at-startup "swaybg" "-i" "/home/sheep/default.webp" "-m" "fill"
-spawn-at-startup "swayidle" \
-    "timeout" "60" "niri msg action power-off-monitors" \
-    "timeout" "300" "try_suspend" \
-    "timeout" "3600" "systemctl suspend" \
-    "before-sleep" "swaylock --image /home/sheep/default.jpg --effect-blur 7x5"
+// spawn-at-startup "swayidle" \
+//     "timeout" "60" "niri msg action power-off-monitors" \
+//     "timeout" "300" "try_suspend" \
+//     "timeout" "3600" "systemctl suspend" \
+//     "before-sleep" "swaylock --image /home/sheep/default.jpg --effect-blur 7x5"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

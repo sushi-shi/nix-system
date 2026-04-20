@@ -30,6 +30,12 @@
       fsType = "ext4";
     };
 
+  fileSystems."/mnt/keepass_key" = {
+    device = "/dev/disk/by-uuid/64A5-F009";
+    fsType = "exfat";
+    options = [ "nofail" "noauto" "noexec" "umask=077" "uid=1001" "gid=100" "x-systemd.automount" ];
+  };
+
   swapDevices =
     [ { device = "/dev/disk/by-label/NIXOS_SWAP"; }
     ];

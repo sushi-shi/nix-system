@@ -19,6 +19,11 @@
       url = "github:sadjow/claude-code-nix";
     };
 
+    hosts = {
+      url = "github:StevenBlack/hosts"; # or a fork/mirror
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     secrets = {
       url = "path:/home/sheep/nixos/secrets.nix";
       flake = false;
@@ -31,6 +36,7 @@
     nixpkgs-unstable,
     home-manager,
     claude-code,
+    hosts,
     secrets,
     ...
   }:
@@ -47,6 +53,17 @@
 
       modules = [
         ./system/configuration.nix
+
+        hosts.nixosModule {
+          networking.stevenBlackHosts = {
+            enable        = true;
+            enableIPv6    = true;
+            blockFakenews = true;
+            blockGambling = true;
+            blockPorn     = true;
+            blockSocial   = false;
+          };
+        }
 
         home-manager.nixosModules.home-manager {
           home-manager.extraSpecialArgs = {
