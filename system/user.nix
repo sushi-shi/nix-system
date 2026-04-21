@@ -14,7 +14,8 @@
            "wireshark"       # packet capture
            "wheel"           # sudo
            "networkmanager"  # network connections
-           "video"           # display devices
+           "video"           # display devices (screen)
+           "input"           # input devices (keyboard)
            "lp"              # printer
          ];
        };

@@ -125,7 +125,7 @@
   networking.hosts = {
     "0.0.0.0" = [
       # "youtube.com" "www.youtube.com" "m.youtube.com" "youtu.be"
-      "vk.com"      "www.vk.com"      "m.vk.com"
+      # "vk.com"      "www.vk.com"      "m.vk.com"
       "vkvideo.ru"  "www.vkvideo.ru"  "m.vkvideo.ru"
     ];
   };

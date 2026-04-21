@@ -29,6 +29,8 @@
       tokei         # count lines of code
       zathura
 
+      evtest        # I use it to disable keyboard :)
+
       # Tool to mirror websites.
       # I learned about it here: https://serverfault.com/questions/73962/wget-recursive-download-but-i-dont-want-to-follow-all-links
       # And I used it to mirror /u/ and /dt/ on dobrochan:

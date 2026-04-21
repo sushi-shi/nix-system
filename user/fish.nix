@@ -81,7 +81,6 @@
     set -x fish_color_param '84a0c6'
     set -x fish_color_quote 'e2a478'
     set -x fish_color_operator 'e2a478'
-    set -x PATH "$PATH:/home/sheep/nixos/nixfiles/user/scripts"
     set -x XDG_DATA_HOME $HOME/.local/share
     set FZF_DEFAULT_COMMAND 'fd --type f'
     # set PATH $HOME/dotfiles/scripts $PATH

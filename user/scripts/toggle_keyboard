@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DEV=/dev/input/event0
+
+if pgrep -f "evtest --grab $DEV" > /dev/null; then
+  pkill -f "evtest --grab $DEV"
+  echo "Keyboard enabled"
+else
+  evtest --grab "$DEV" > /dev/null 2>&1 &
+  echo "Keyboard disabled"
+fi

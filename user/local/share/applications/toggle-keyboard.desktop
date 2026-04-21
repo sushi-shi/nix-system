@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Toggle Keyboard
+Exec=$HOME/nixos/nixfiles/user/scripts/toggle_keyboard
+Type=Application

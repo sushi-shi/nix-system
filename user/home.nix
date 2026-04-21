@@ -9,6 +9,10 @@
     source = ./config;
     recursive = true;
   };
+  xdg.dataFile."." = {
+    source = ./local;
+    recursive = true;
+  };
 
   # Copy everything from `./home` into `~` and prepend `.` to it.
   home.username = "sheep";
@@ -23,6 +27,9 @@
         then { source = name; recursive = true; }
         else { text = builtins.readFile name;   };
     in mapAttrs' each files;
+  home.sessionVariables = {
+    PATH = "$HOME/nixos/nixfiles/user/scripts:$PATH";
+  };
 
   # .Xresources
   xresources.properties = {
