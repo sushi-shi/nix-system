@@ -10,7 +10,7 @@
     recursive = true;
   };
   xdg.dataFile."." = {
-    source = ./local;
+    source = ./local/share;
     recursive = true;
   };
 

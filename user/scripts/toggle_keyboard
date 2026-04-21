@@ -2,6 +2,13 @@
 
 DEV=/dev/input/event0
 
+COUNT=$(libinput list-devices | grep -c 'Capabilities.*keyboard')
+
+if [ "$COUNT" -le 6 ]; then
+  echo "No external keyboard connected"
+  exit 1
+fi
+
 if pgrep -f "evtest --grab $DEV" > /dev/null; then
   pkill -f "evtest --grab $DEV"
   echo "Keyboard enabled"

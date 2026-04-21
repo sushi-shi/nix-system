@@ -29,6 +29,7 @@
       tokei         # count lines of code
       zathura
 
+      libinput      # lists input devices
       evtest        # I use it to disable keyboard :)
 
       # Tool to mirror websites.
