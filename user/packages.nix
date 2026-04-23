@@ -26,7 +26,6 @@
       termusic      # Play music from terminal
       playerctl     # Handle music related events
       torsocks
-      keepassxc
       qrencode      # QR-code generator
 
       comma         # Run command without installing it

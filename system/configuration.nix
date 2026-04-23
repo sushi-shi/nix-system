@@ -76,6 +76,8 @@
     fzf ripgrep
     git direnv
 
+    keepassxc
+
     # Sysutils
     lshw          # list hardware
     lsof
