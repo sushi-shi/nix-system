@@ -93,6 +93,7 @@
     iphone = [];
 
     unused = [
+      eyed3         # mp3 metadata editor
       nheko         # Native Matrix client
       spotify
       jrnl          # diary

@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Ranger
+Exec=start_ranger
+Type=Application
