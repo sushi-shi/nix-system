@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "dense-analysis",
         "repo": "ale",
-        "rev": "69c945d5daecadf8e4c4c499d0a7babda748d603",
-        "sha256": "19davlfzkajyk7wdkgkxvkq35f3677x67xd04lfm6m5isyj9n9hm",
+        "rev": "c59c0d1a573a7b2fe491f78af4f2033bde454753",
+        "sha256": "03v2sx19zgfyqb2y7x0afj6y3c6fgm074b0v90vx1hbdi21dfmfa",
         "type": "tarball",
-        "url": "https://github.com/dense-analysis/ale/archive/69c945d5daecadf8e4c4c499d0a7babda748d603.tar.gz",
+        "url": "https://github.com/dense-analysis/ale/archive/c59c0d1a573a7b2fe491f78af4f2033bde454753.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "bclose.vim": {
@@ -29,10 +29,10 @@
         "homepage": null,
         "owner": "glacambre",
         "repo": "firenvim",
-        "rev": "a18ef908ac06b52ad9333b70e3e630b0a56ecb3d",
-        "sha256": "098zjcybswsawjqgs1ynpr4ys77hfi6viw3lm1rdig3a6bmz3v6y",
+        "rev": "b68449b92dfea73a54e4c8f2307fc244a3a574bd",
+        "sha256": "008nvzmbmadvbb7af9gnlf6xx855pds59w60sbq285aj4xil4fjy",
         "type": "tarball",
-        "url": "https://github.com/glacambre/firenvim/archive/a18ef908ac06b52ad9333b70e3e630b0a56ecb3d.tar.gz",
+        "url": "https://github.com/glacambre/firenvim/archive/b68449b92dfea73a54e4c8f2307fc244a3a574bd.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gruvbox": {
@@ -89,10 +89,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "dd678782cae74508d6b4824580d2b0935308011e",
-        "sha256": "0dk8dhh9vla2s409anmrfkva6h3r32xmz3cm8ha09wyk8iyf1f87",
+        "rev": "368268e45dee0c94d1cf898381a384856379ad76",
+        "sha256": "1k03n7qmaz6yf2r8i5sng4kii3rr1y36g8k70sg7piqz3npxisy3",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/dd678782cae74508d6b4824580d2b0935308011e.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/368268e45dee0c94d1cf898381a384856379ad76.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -173,10 +173,10 @@
         "homepage": "http://www.vim.org/scripts/script.php?script_id=3613",
         "owner": "AndrewRadev",
         "repo": "splitjoin.vim",
-        "rev": "9ce4fb4f0538cff02a57a393057b7ab371324483",
-        "sha256": "09z85yav830rl9zgcy3aw04c1ys0599h3wlfll0qlc6kvbn3haaa",
+        "rev": "8c4c87e72d20d8d5eee8b29c320eb61767578841",
+        "sha256": "162539kbwkhad80z713jxk6c0sah0p0sg9vsn9nsaymqh5c83iwh",
         "type": "tarball",
-        "url": "https://github.com/AndrewRadev/splitjoin.vim/archive/9ce4fb4f0538cff02a57a393057b7ab371324483.tar.gz",
+        "url": "https://github.com/AndrewRadev/splitjoin.vim/archive/8c4c87e72d20d8d5eee8b29c320eb61767578841.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "startuptime.vim": {

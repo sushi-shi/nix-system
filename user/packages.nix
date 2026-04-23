@@ -29,6 +29,7 @@
       tokei         # count lines of code
       zathura
 
+      libnotify     # dbus notifications
       libinput      # lists input devices
       evtest        # I use it to disable keyboard :)
 

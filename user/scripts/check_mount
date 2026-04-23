@@ -1,0 +1,8 @@
+#!/bin/sh
+
+while true; do
+    if lsblk -o MOUNTPOINTS | rg -q /mnt/keepass_key; then
+        notify-send -u normal -t 8000 "USB Drive Mounted" "Remember to eject: keepass_key"
+    fi
+    sleep 60
+done

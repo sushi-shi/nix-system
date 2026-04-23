@@ -59,6 +59,7 @@
 
   environment.systemPackages = with pkgs; [
     # Niri environment
+    mako
     fuzzel
     waybar
     swaybg
@@ -124,8 +125,8 @@
 
   networking.hosts = {
     "0.0.0.0" = [
-      # "youtube.com" "www.youtube.com" "m.youtube.com" "youtu.be"
-      # "vk.com"      "www.vk.com"      "m.vk.com"
+      "youtube.com" "www.youtube.com" "m.youtube.com" "youtu.be"
+      "vk.com"      "www.vk.com"      "m.vk.com"
       "vkvideo.ru"  "www.vkvideo.ru"  "m.vkvideo.ru"
     ];
   };

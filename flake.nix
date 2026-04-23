@@ -61,7 +61,7 @@
             blockFakenews = true;
             blockGambling = true;
             blockPorn     = true;
-            blockSocial   = false;
+            blockSocial   = true;
           };
         }
 
