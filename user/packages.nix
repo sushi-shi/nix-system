@@ -22,6 +22,8 @@
     utils = [
       claude-code.packages.${pkgs.system}.default
 
+      cargo-modules
+      termusic      # Play music from terminal
       playerctl     # Handle music related events
       torsocks
       keepassxc
@@ -104,6 +106,7 @@
       (pkgs.callPackage ./pkgs/termusic/default.nix {})
 
       # games
+      fheroes2
       brogue
       wesnoth
       steam-run-native
