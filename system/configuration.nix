@@ -77,7 +77,6 @@
     git direnv
 
     # Sysutils
-    playerctl
     lshw          # list hardware
     lsof
     lsscsi
@@ -97,9 +96,9 @@
     tlp
     linuxPackages.cpupower
 
-    # Etc.
-    torsocks
-    keepassxc
+    libnotify     # dbus notifications
+    libinput      # lists input devices
+    evtest        # I use it to disable keyboard :)
   ];
 
   services.udev.extraRules = ''

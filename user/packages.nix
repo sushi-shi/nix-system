@@ -22,6 +22,9 @@
     utils = [
       claude-code.packages.${pkgs.system}.default
 
+      playerctl     # Handle music related events
+      torsocks
+      keepassxc
       qrencode      # QR-code generator
 
       comma         # Run command without installing it
@@ -29,9 +32,6 @@
       tokei         # count lines of code
       zathura
 
-      libnotify     # dbus notifications
-      libinput      # lists input devices
-      evtest        # I use it to disable keyboard :)
 
       # Tool to mirror websites.
       # I learned about it here: https://serverfault.com/questions/73962/wget-recursive-download-but-i-dont-want-to-follow-all-links
