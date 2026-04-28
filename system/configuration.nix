@@ -42,11 +42,11 @@
             include "ru"
             name[Group1] = "Russian (Belarusian extras)";
 
-            replace key <AD03> { [ Cyrillic_u, Cyrillic_U, U045E, U040E ] };
-            replace key <AD05> { [ Cyrillic_ie, Cyrillic_IE, Cyrillic_io, Cyrillic_IO ] };
-            replace key <AD09> { [ Cyrillic_u, Cyrillic_U, U045E, U040E ] };
-            replace key <AD12> { [ Cyrillic_hardsign, Cyrillic_HARDSIGN, apostrophe, quotedbl ] };
-            replace key <AB05> { [ Cyrillic_i, Cyrillic_I, U0456, U0406 ] };
+            replace key <AD03> { [        Cyrillic_u,        Cyrillic_U,       U045E,       U040E ] };
+            replace key <AD05> { [       Cyrillic_ie,       Cyrillic_IE, Cyrillic_io, Cyrillic_IO ] };
+            replace key <AD09> { [    Cyrillic_shcha,    Cyrillic_SHCHA,       U045E,       U040E ] };
+            replace key <AD12> { [ Cyrillic_hardsign, Cyrillic_HARDSIGN,  apostrophe,    quotedbl ] };
+            replace key <AB05> { [        Cyrillic_i,        Cyrillic_I,       U0456,       U0406 ] };
         };
       '';
     };
