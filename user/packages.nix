@@ -71,6 +71,9 @@
       unrar unzip zip p7zip
       neofetch
       imagemagick
+
+      ghidra
+      iaito
     ];
 
     apps = [
@@ -148,7 +151,6 @@
       protontricks
       protonup-ng
 
-      ghidra
 
       libheif
       xplr

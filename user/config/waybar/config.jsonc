@@ -3,13 +3,16 @@
 
     "modules-left": ["battery", "network"],
     "modules-center": ["niri/window"],
-    "modules-right": ["niri/language", "pulseaudio", "clock"],
+    "modules-right": ["custom/lang", "pulseaudio", "clock"],
 
     "niri/window": {
         "max-length": 50
     },
-    "niri/language": {
-        "format": "{short}",
+    "custom/lang": {
+        "exec": "niri msg keyboard-layouts | awk '/^ \\* /{print $3}' | sed 's|Polish|pl|;s|Russian|ru|'",
+        "interval": 1,
+        "format": "{}",
+        "tooltip": false
     },
 
     "battery": {

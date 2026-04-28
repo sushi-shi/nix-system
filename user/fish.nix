@@ -83,7 +83,6 @@
     set -x fish_color_operator 'e2a478'
     set -x XDG_DATA_HOME $HOME/.local/share
     set FZF_DEFAULT_COMMAND 'fd --type f'
-    # set PATH $HOME/dotfiles/scripts $PATH
     eval (direnv hook fish)
 
     function prefix_line

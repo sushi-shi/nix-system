@@ -28,7 +28,35 @@
 
   time.timeZone = "Europe/Poland";
 
-  services.xserver.enable = true;
+  services.xserver.xkb = {
+    layout = "pl,ru-by";
+
+    options = "caps:swapescape,grp:alt_shift_toggle";
+
+    extraLayouts.ru-by = {
+      description = "Russian with Belarusian ў and і";
+      languages = [ "rus" ];
+      symbolsFile = pkgs.writeText "xkb-ru-by" ''
+        partial alphanumeric_keys modifier_keys
+        xkb_symbols "ru-by" {
+            include "ru"
+            name[Group1] = "Russian (Belarusian extras)";
+
+            replace key <AD03> { [ Cyrillic_u, Cyrillic_U, U045E, U040E ] };
+            replace key <AB05> { [ Cyrillic_i, Cyrillic_I, U0456, U0406 ] };
+            replace key <AD12> { [ Cyrillic_hardsign, Cyrillic_HARDSIGN, apostrophe, quotedbl ] };
+        };
+      '';
+    };
+  };
+  # caps:swapescape in tty
+  # `console.useXkbConfig` is broken. Because of Cyrillic replacements, 'be]' characters are no longer printed.
+  console.keyMap = pkgs.writeText "us-caps-esc.map" ''
+    include "${pkgs.kbd}/share/keymaps/i386/qwerty/us.map.gz"
+    keycode 58 = Escape
+    keycode 1  = Caps_Lock
+  '';
+
   services.displayManager.gdm.enable = true;
 
   programs.niri = {
