@@ -51,18 +51,15 @@ nnoremap <space><space> :vert sb<CR>
 "
 
 " Fuzzy-navigation
+nnoremap sf :Rg<CR>
+nnoremap sn :Files<CR>
 nnoremap sg :GFiles<CR>
-nnoremap sf :Files<CR>
 nnoremap sb :Buffers<CR>
 nnoremap sc :Colors<CR>
 nnoremap sh :History:<CR>
+nnoremap sg :GFiles<CR>
+
 nnoremap sw yaw:Rg <C-R>"<CR>
-
-
-"" LEADER
-
-" Not remapped marks are still usable.
-let mapleader = "m"
 
 
 "" OTHER REMAPS

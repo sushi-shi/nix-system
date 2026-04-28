@@ -28,9 +28,7 @@ let
     # Language server
     coc-nvim
     coc-prettier
-  ];
 
-  lazyPlugins  = with vimPlugins; [
     # Themes
     iceberg-vim
     nord-vim
@@ -77,9 +75,7 @@ let
     "sideways.vim"    # move arguments in functions
     "splitjoin.vim"   # context aware splits and joins
     "ranger.vim"
-  ];
 
-  nivLazyPlugins = map mkPlugin [
     # Themes
     "gruvbox"
     "happy_rusting.vim"
@@ -104,7 +100,7 @@ let
     configure = {
       customRC = "source ~/.config/nvim/init.lua";
       packages.myVimPackage = {
-        start = eagerPlugins ++ nivEagerPlugins ++ lazyPlugins ++ nivLazyPlugins;
+        start = eagerPlugins ++ nivEagerPlugins;
         opt = [];
       };
     };

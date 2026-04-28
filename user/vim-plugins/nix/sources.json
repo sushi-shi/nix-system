@@ -29,10 +29,10 @@
         "homepage": null,
         "owner": "glacambre",
         "repo": "firenvim",
-        "rev": "b68449b92dfea73a54e4c8f2307fc244a3a574bd",
-        "sha256": "008nvzmbmadvbb7af9gnlf6xx855pds59w60sbq285aj4xil4fjy",
+        "rev": "899206da6ec88e476d3f96df5e5ef48e37dc87d2",
+        "sha256": "1kd90gnf5w5qahjds2pc1lkd6wrrbnj67ggfd9078q3sh0xqcf66",
         "type": "tarball",
-        "url": "https://github.com/glacambre/firenvim/archive/b68449b92dfea73a54e4c8f2307fc244a3a574bd.tar.gz",
+        "url": "https://github.com/glacambre/firenvim/archive/899206da6ec88e476d3f96df5e5ef48e37dc87d2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "gruvbox": {
