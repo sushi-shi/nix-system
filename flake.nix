@@ -17,6 +17,7 @@
 
     claude-code = {
       url = "github:sadjow/claude-code-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hosts = {
@@ -60,8 +61,8 @@
             enableIPv6    = true;
             blockFakenews = true;
             blockGambling = true;
-            blockPorn     = true;
-            blockSocial   = true;
+            blockPorn     = false;
+            blockSocial   = false;
           };
         }
 

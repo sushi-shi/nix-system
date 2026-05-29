@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+set -eEuo pipefail
+
+summarize=false
+positional=()
+for arg in "$@"; do
+    case "$arg" in
+        --sum) summarize=true ;;
+        -h|--help)
+            echo "usage: $0 [--sum] <url> [lang]" >&2
+            exit 0 ;;
+        --) ;;
+        *) positional+=("$arg") ;;
+    esac
+done
+
+if [ "${#positional[@]}" -lt 1 ]; then
+    echo "usage: $0 [--sum] <url> [lang]" >&2
+    exit 1
+fi
+
+url="${positional[0]}"
+lang="${positional[1]:-en}"
+
+safe_cleanup() {
+    local dir="${1:-}"
+    if [[ -z "$dir" || "$dir" == "/" || "$dir" != /tmp/* ]]; then
+        echo "refusing to remove '$dir' (not under /tmp)" >&2
+        return 1
+    fi
+    rm -rf --preserve-root=all -- "$dir"
+}
+
+tmpdir=$(mktemp -d)
+trap 'safe_cleanup "$tmpdir"' EXIT
+
+yt-dlp \
+    --cookies-from-browser=firefox \
+    --skip-download \
+    --write-auto-subs \
+    --sub-langs "$lang" \
+    --convert-subs vtt \
+    -o "${tmpdir}/%(title)s.%(ext)s" \
+    "$url"
+
+next_name() {
+    local base="subs" ext="txt" n=0 candidate="subs.txt"
+    while [ -e "$candidate" ]; do
+        n=$((n + 1))
+        candidate="${base}_${n}.${ext}"
+    done
+    printf '%s' "$candidate"
+}
+
+written=()
+shopt -s nullglob
+for vtt in "$tmpdir"/*."$lang".vtt; do
+    out=$(next_name)
+    sed '1,/^$/d; s/[[:space:]]*$//' "$vtt" \
+      | rg -v -e '<.*>' -e '\-\->' -e '^$' \
+      | sed 's/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/</g; s/&gt;/>/g' \
+      | uniq \
+      > "$out"
+    echo "wrote $out"
+    written+=("$out")
+done
+
+if [ "${#written[@]}" -eq 0 ]; then
+    echo "no subtitles produced" >&2
+    exit 1
+fi
+
+if command -v wl-copy >/dev/null 2>&1; then
+    cat "${written[@]}" | wl-copy
+    echo "copied to clipboard"
+else
+    echo "wl-copy not found; skipped clipboard" >&2
+fi
+
+if [ "$summarize" = true ]; then
+    if ! command -v claude >/dev/null 2>&1; then
+        echo "claude CLI not found; install @anthropic-ai/claude-code" >&2
+        exit 1
+    fi
+    refs=""
+    for f in "${written[@]}"; do
+        refs+="@${f} "
+    done
+    claude "Summarize the transcript(s) in ${refs}- main topic, key points, takeaways. I may have follow-up questions."
+fi

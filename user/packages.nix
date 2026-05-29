@@ -1,9 +1,15 @@
-{ pkgs, claude-code, ... }:
+{ pkgs, pkgs-unstable, claude-code, ... }:
 {
   imports = [
     ./vim.nix
     ./fish.nix
   ];
+
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+    options = [ "--cmd" "cd" ];
+  };
 
   programs.mpv = {
     enable = true;
@@ -20,19 +26,23 @@
 
   home.packages = with pkgs; let
     utils = [
+      fd
+      gh
+      pkgs-unstable.zed-editor
+
       claude-code.packages.${pkgs.system}.default
 
       cargo-modules
       termusic      # Play music from terminal
       playerctl     # Handle music related events
       torsocks
+      brightnessctl # Control screen brightness
       qrencode      # QR-code generator
 
       comma         # Run command without installing it
       kalker        # command line calculator
       tokei         # count lines of code
       zathura
-
 
       # Tool to mirror websites.
       # I learned about it here: https://serverfault.com/questions/73962/wget-recursive-download-but-i-dont-want-to-follow-all-links
@@ -74,6 +84,8 @@
 
       ghidra
       iaito
+
+      wineWowPackages.base
     ];
 
     apps = [
@@ -102,11 +114,8 @@
 
       teams-for-linux
 
-      wineWowPackages.base
       libreoffice
       ghc
-      (pkgs.callPackage ./pkgs/joshuto/default.nix {})
-      (pkgs.callPackage ./pkgs/termusic/default.nix {})
 
       # games
       fheroes2
@@ -172,20 +181,18 @@
       ffsend        # Share files from CLI
       difftastic    # Smart diff utility
       wget
+      w3m cachix
       paprefs       # multiple outputs
       entr          # run command on file update
       (ffmpeg.override {
-      withXcb = true;
+        withXcb = true;
       })
       sd            # better sed
       gromit-mpx    # on-screen drawing
       xdot          # graph viewer
 
       cloc
-
-      w3m wget cachix
       ctags
-      entr
     ];
 
   in

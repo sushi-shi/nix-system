@@ -22,6 +22,8 @@
     "tail" = "less +F";
     "fg"   = "fg 1>/dev/null 2>&1";
 
+    "z"    = "cd";
+
     "j"    = "pop";   # j-pop, yes
     "jj"   = "pop 2";
     "jjj"  = "pop 3";

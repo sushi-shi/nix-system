@@ -66,13 +66,6 @@
     package = pkgs-unstable.niri;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.sheep = {
-    isNormalUser = true;
-    createHome = true;
-    extraGroups = [ "wheel" "networkmanager" ];
-  };
-
   programs.bandwhich.enable = true;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
@@ -97,6 +90,7 @@
     swaylock-effects
     swayimg
     xwayland-satellite
+    wl-clipboard
 
     # Terminal
     starship
@@ -156,9 +150,7 @@
 
   networking.hosts = {
     "0.0.0.0" = [
-      "youtube.com" "www.youtube.com" "m.youtube.com" "youtu.be"
-      "vk.com"      "www.vk.com"      "m.vk.com"
-      "vkvideo.ru"  "www.vkvideo.ru"  "m.vkvideo.ru"
+      # "youtube.com" "www.youtube.com" "m.youtube.com" "youtu.be"
     ];
   };
 

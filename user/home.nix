@@ -27,9 +27,7 @@
         then { source = name; recursive = true; }
         else { text = builtins.readFile name;   };
     in mapAttrs' each files;
-  home.sessionVariables = {
-    PATH = "$HOME/nixos/nixfiles/user/scripts:$PATH";
-  };
+  home.sessionPath = [ "$HOME/nixos/nixfiles/user/scripts" ];
 
   # .Xresources
   xresources.properties = {
