@@ -1,0 +1,11 @@
+#!/bin/sh
+# Toggle swayidle so the machine stays awake while agents run in the background.
+
+if pgrep -x swayidle > /dev/null; then
+  pkill -x swayidle
+  niri msg action power-on-monitors > /dev/null 2>&1
+  notify-send -t 3000 "Idle" "swayidle disabled — machine stays awake"
+else
+  swayidle_start > /dev/null 2>&1 &
+  notify-send -t 3000 "Idle" "swayidle enabled"
+fi

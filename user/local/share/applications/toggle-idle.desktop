@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Toggle Idle
+Exec=toggle_idle
+Type=Application

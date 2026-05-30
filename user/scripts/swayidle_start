@@ -1,0 +1,9 @@
+#!/bin/sh
+# Canonical swayidle invocation. Used at startup and by toggle_idle so the
+# timeouts live in exactly one place.
+
+exec swayidle \
+    timeout 60   "niri msg action power-off-monitors" \
+    timeout 300  "try_suspend" \
+    timeout 3600 "systemctl suspend" \
+    before-sleep "swaylock --image /home/sheep/default.jpg --effect-blur 7x5"
