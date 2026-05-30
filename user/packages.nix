@@ -30,7 +30,7 @@
       gh
       pkgs-unstable.zed-editor
 
-      claude-code.packages.${pkgs.system}.default
+      claude-code.packages.${pkgs.stdenv.hostPlatform.system}.default
 
       cargo-modules
       termusic      # Play music from terminal
