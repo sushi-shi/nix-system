@@ -1,15 +1,14 @@
 { stdenv, fetchFromGitHub
-, cmake, git, dpkg
+, cmake
 , boost
 }:
-
 
 stdenv.mkDerivation rec {
   pname = "cpp-dependencies";
   version = "0.8.2";
 
   buildInputs = [ boost ];
-  nativeBuildInputs = [ cmake git dpkg ];
+  nativeBuildInputs = [ cmake ];
 
   src = fetchFromGitHub {
     owner = "tomtom-international";

@@ -1,6 +1,6 @@
-{ lib, stdenv, fetchurl, makeWrapper, jdk8, javaPackages, libXxf86vm }:
+{ lib, stdenv, fetchurl, makeWrapper, jdk8, libXxf86vm }:
 stdenv.mkDerivation rec {
-  pname = "haven-and-heart";
+  pname = "haven-and-hearth";
   version = "0.0.0";
 
   src = fetchurl {
@@ -10,26 +10,21 @@ stdenv.mkDerivation rec {
 
   dontUnpack = true;
 
-  nativeBuildInputs = [ jdk8 javaPackages.jogl_2_3_2 makeWrapper  libXxf86vm ];
+  nativeBuildInputs = [ makeWrapper ];
+  buildInputs = [ jdk8 libXxf86vm ];
+
   installPhase = ''
-    mkdir -p $out/bin
+    mkdir -p $out/bin $out/lib/natives
     cp ${src} $out/hafen-launcher.jar
+    cp -r ${./natives/linux-amd64}/. $out/lib/natives/
 
-    echo ${libXxf86vm}
-
-    cat 1>$out/bin/hafen <<EOF
-    #!/usr/bin/env bash
-
-    ${jdk8}/bin/java \
-      -Djava.library.path=${libXxf86vm}/lib \
-      -jar $out/hafen-launcher.jar
-    EOF
-
-    chmod +x $out/bin/hafen
+    makeWrapper ${jdk8}/bin/java $out/bin/hafen \
+      --add-flags "-Djava.library.path=$out/lib/natives:${libXxf86vm}/lib" \
+      --add-flags "-jar $out/hafen-launcher.jar"
   '';
 
   meta = with lib; {
-    description = "Haven & Hearth is a MMORPG set in a fictional world loosely inspired by Slavic and Germanic myth and legend.";
+    description = "Haven & Hearth MMORPG set in a world inspired by Slavic and Germanic myth.";
     license = with licenses; [ unfree ];
     maintainers = with maintainers; [ ];
   };
