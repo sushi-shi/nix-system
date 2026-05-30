@@ -56,7 +56,10 @@ nnoremap sn :Files<CR>
 nnoremap sg :GFiles<CR>
 nnoremap sb :Buffers<CR>
 nnoremap sc :Colors<CR>
-nnoremap sh :History:<CR>
+nnoremap sh :History<CR>
+nnoremap s: :History:<CR>
+nnoremap s/ :History/<CR>
+nnoremap s? :History/<CR>
 nnoremap sg :GFiles<CR>
 
 nnoremap sw yaw:Rg <C-R>"<CR>
