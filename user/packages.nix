@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, claude-code, ... }:
+{ pkgs, pkgs-unstable, claude-code, username, ... }:
 {
   imports = [
     ./vim.nix
@@ -22,7 +22,7 @@
 
   services.lorri.enable = true;
   services.mpd.enable = true;
-  services.mpd.musicDirectory = "/home/sheep/Music";
+  services.mpd.musicDirectory = "/home/${username}/Music";
 
   home.packages = with pkgs; let
     utils = [

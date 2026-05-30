@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, username, ... }:
 {
   imports = [
     ./packages.nix
@@ -15,8 +15,8 @@
   };
 
   # Copy everything from `./home` into `~` and prepend `.` to it.
-  home.username = "sheep";
-  home.homeDirectory = "/home/sheep";
+  home.username = username;
+  home.homeDirectory = "/home/${username}";
   home.file = with lib.attrsets; let
     files  = builtins.readDir prefix;
     prefix = ./home;

@@ -43,15 +43,18 @@
   }:
   let
     system = "x86_64-linux";
+    # Single source of truth for the username (also used as the host name and
+    # the nixosConfigurations attr, which must match for `nixos-rebuild #`).
+    username = "sheep";
     pkgs-unstable = import nixpkgs-unstable {
       inherit system;
       config.allowUnfree = true;
     };
   in {
-    nixosConfigurations.sheep = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.${username} = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = {
-        inherit pkgs-unstable;
+        inherit pkgs-unstable username;
         secrets = import secrets;
       };
 
@@ -73,12 +76,13 @@
           home-manager.extraSpecialArgs = {
             inherit pkgs-unstable;
             inherit claude-code;
+            inherit username;
           };
 
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.users.sheep = import ./user/home.nix;
+          home-manager.users.${username} = import ./user/home.nix;
         }
       ];
     };

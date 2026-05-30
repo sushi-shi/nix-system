@@ -1,4 +1,4 @@
-{ config, lib, pkgs, pkgs-unstable, secrets, ... }:
+{ config, lib, pkgs, pkgs-unstable, secrets, username, ... }:
 
 {
   imports =
@@ -11,7 +11,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "sheep"; # Define your hostname.
+  networking.hostName = username; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
   # networking.networkmanager.enable = true;
@@ -129,7 +129,7 @@
 
   services.udev.extraRules = ''
     SUBSYSTEM=="block", ENV{ID_VENDOR_ID}=="04e8", ENV{ID_MODEL_ID}=="6300", ACTION=="add", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}="keepass-autoopen.service"
-    SUBSYSTEM=="block", ENV{ID_VENDOR_ID}=="04e8", ENV{ID_MODEL_ID}=="6300", ACTION=="remove", RUN+="${pkgs.systemd}/bin/systemctl --user --machine=sheep@.host start keepass-autoclose.service"
+    SUBSYSTEM=="block", ENV{ID_VENDOR_ID}=="04e8", ENV{ID_MODEL_ID}=="6300", ACTION=="remove", RUN+="${pkgs.systemd}/bin/systemctl --user --machine=${username}@.host start keepass-autoclose.service"
   '';
 
   systemd.user.services.keepass-autoopen = {

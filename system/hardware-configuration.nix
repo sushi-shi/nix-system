@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ config, lib, pkgs, modulesPath, username, ... }:
 
 {
   imports =
@@ -50,7 +50,7 @@
   fileSystems."/mnt/keepass_key" = {
     device = "/dev/disk/by-uuid/EDEE-5712";
     fsType = "exfat";
-    options = [ "nofail" "noauto" "noexec" "umask=077" "uid=${toString config.users.users.sheep.uid}" "gid=${toString config.users.users.sheep.group}" "x-systemd.automount" ];
+    options = [ "nofail" "noauto" "noexec" "umask=077" "uid=${toString config.users.users.${username}.uid}" "gid=${toString config.users.users.${username}.group}" "x-systemd.automount" ];
   };
 
   environment.etc."machine-id".source = "/nix/persist/etc/machine-id";
