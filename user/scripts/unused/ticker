@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-TICKER="/home/sheep/.cache/ticker"
-QUOTES="/home/sheep/Notes/1.Quotes/*"
-FIRST="/home/sheep/.cache/ticker_wait"
+TICKER="$HOME/.cache/ticker"
+QUOTES="$HOME/Notes/1.Quotes/*"
+FIRST="$HOME/.cache/ticker_wait"
 
 if [ -f "${TICKER}" ]; then
   NEXT=$(cat -- "${TICKER}" | cut -c 30-)

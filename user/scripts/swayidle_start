@@ -6,4 +6,4 @@ exec swayidle \
     timeout 60   "niri msg action power-off-monitors" \
     timeout 300  "try_suspend" \
     timeout 3600 "systemctl suspend" \
-    before-sleep "swaylock --image /home/sheep/default.jpg --effect-blur 7x5"
+    before-sleep "swaylock --image $HOME/default.jpg --effect-blur 7x5"
